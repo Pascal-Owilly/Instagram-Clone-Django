@@ -45,14 +45,23 @@
             </ul>
 
             <div class="d-flex align-items-center">
-                <button type="button" class="btn btn-link px-3 me-2">
-                    Login
-                </button>
-                <button type="button" class="btn btn-link me-5">
-                    Sign up
-                </button>
-                <a class="btn btn-dark px-3" href="" role="button"><i class="fab fa-github"></i></a>
-            </div>
+                {% if user.is_authenticated %}
+
+                    <button type="button" class="btn btn-link px-3 me-2">
+                        <a href=" {% url 'logout' %} ">Logout</a>
+                    </button>
+      
+                {% else %}
+                
+                    <button type="button" class="btn btn-link px-3 me-2">
+                        <a href=" {% url 'login' %} ">Login</a>
+                    </button>
+                    <button type="button" class="btn btn-link me-5">
+                        <a href=" {% url 'register' %} ">Register</a>
+                    </button>
+                    <a class="btn btn-dark px-3" href="" role="button"><i class="fab fa-github"></i></a>
+
+                {% endif %}
         </div>
         <!-- Collapsible wrapper -->
 
