@@ -47,6 +47,11 @@
             <div class="d-flex align-items-center">
                 {% if user.is_authenticated %}
 
+
+                <button type="button" class="btn btn-link px-3 me-2">
+                    <a href=" {% url 'profile' %} ">Profile</a>
+                </button>
+
                     <button type="button" class="btn btn-link px-3 me-2">
                         <a href=" {% url 'logout' %} ">Logout</a>
                     </button>
@@ -84,7 +89,7 @@
                 <div class="content-section">
                     <h3> Sidebar </h3>
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-dark">Latest</li>
+                        <li class="list-group-item list-group-item-dark">Blogs</li>
                         <li class="list-group-item list-group-item-dark">Latest</li>
                         <li class="list-group-item list-group-item-dark">Latest</li>
                         <li class="list-group-item list-group-item-dark">Latest</li>
